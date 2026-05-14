@@ -1,0 +1,26 @@
+{
+  "name": "shopfleet-orders",
+  "description": "Order processing service (Python/FastAPI)",
+  "version": "1.0.0",
+  "role": "service",
+  "language": "python",
+  "build": {
+    "command": "pip install -e .",
+    "artifacts": []
+  },
+  "test": {
+    "command": "pytest"
+  },
+  "lint": {
+    "command": "ruff check ."
+  },
+  "dependencies": [
+    "shopfleet-shared",
+    "shopfleet-users",
+    "shopfleet-products"
+  ],
+  "dependents": [
+    "shopfleet-payments",
+    "shopfleet-notifications"
+  ]
+}
